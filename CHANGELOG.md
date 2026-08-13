@@ -10,6 +10,7 @@ The core and options addons are versioned and released together.
 - Clarified that the core and options addons share the core SavedVariables data and must be installed together.
 - Added backup, rollback, and original-addon conflict precautions to the migration guide.
 - Moved fork attribution from the bottom of General to a dedicated Credits tab with project links and release information.
+- Expanded the Credits tab with the original CurseForge project, original GitHub repository, maintained upstream repository, exact source release, and WorgenFix repository and release links.
 
 ## v4.3.9-classic-worgenfix.2 (2026-08-13)
 
