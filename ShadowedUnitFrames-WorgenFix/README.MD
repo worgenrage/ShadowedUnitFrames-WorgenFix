@@ -43,6 +43,31 @@ Existing upstream Lua identifiers and configuration behavior are intentionally p
 
 The fork uses the separate `ShadowedUFDBWorgenFix` SavedVariables database and does not automatically import or modify the official addon's `ShadowedUFDB` database.
 
+## Migrating An Existing SUF Configuration
+
+Migration is optional and must be performed while the WoW client is completely closed. The options addon has no separate SavedVariables file.
+
+1. Exit the WoW client completely.
+2. Open `World of Warcraft/_classic_era_/WTF/Account/<ACCOUNT_NAME>/SavedVariables/`.
+3. Back up both `ShadowedUnitFrames.lua` and `ShadowedUnitFrames-WorgenFix.lua` if they exist.
+4. Copy `ShadowedUnitFrames.lua` to `ShadowedUnitFrames-WorgenFix.lua`.
+5. Open the copied file in a plain-text editor and change only the top-level assignment:
+
+   ```lua
+   ShadowedUFDB = {
+   ```
+
+   to:
+
+   ```lua
+   ShadowedUFDBWorgenFix = {
+   ```
+
+6. Leave the database table contents unchanged, save the file, and start WoW with both WorgenFix addons enabled.
+7. Keep the original `ShadowedUnitFrames` and `ShadowedUF_Options` addons disabled while using the fork.
+
+This copies the existing profiles without changing the original SavedVariables file. Restore or remove the copied file if the migrated configuration causes a problem.
+
 ## Attribution And Licensing
 
 Shadowed Unit Frames was originally created by Shadowed. This fork is based on v4.3.9-classic from the upstream project maintained by Hendrik Leppkes (Nevcairiel). Christian Hamar is credited only for the WorgenFix-specific compatibility modifications and does not claim authorship or ownership of the original Shadowed Unit Frames code.

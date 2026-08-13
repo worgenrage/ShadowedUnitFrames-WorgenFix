@@ -18,7 +18,7 @@ The options addon depends on the core addon. Both packages use the same release 
 - Upstream maintainer: **Hendrik Leppkes** (`Nevcairiel`)
 - WorgenFix modifications: **Christian Hamar**
 - Upstream version used: **v4.3.9-classic**
-- Current fork version: **v4.3.9-classic-worgenfix.2**
+- Current fork version: **v4.3.9-classic-worgenfix.3**
 - Target client: **WoW Classic Era / Hardcore 1.15.9**
 
 Official and upstream links:
@@ -67,6 +67,43 @@ Open the configuration using `/suf` or `/shadoweduf`.
 ## SavedVariables
 
 The fork uses `ShadowedUFDBWorgenFix` and does not automatically import, modify, or share the official addon's `ShadowedUFDB` database.
+
+### Migrating An Existing SUF Configuration
+
+Migration is optional and must be performed while the WoW client is completely closed. The options addon has no separate SavedVariables file; all profiles and layouts are stored by the core addon.
+
+1. Exit the WoW client completely. A logout or `/reload` is not sufficient because WoW writes SavedVariables during shutdown.
+2. Open the Classic Era account SavedVariables directory:
+
+   ```text
+   World of Warcraft/_classic_era_/WTF/Account/<ACCOUNT_NAME>/SavedVariables/
+   ```
+
+3. Make backup copies of the following files if they exist:
+
+   ```text
+   ShadowedUnitFrames.lua
+   ShadowedUnitFrames-WorgenFix.lua
+   ```
+
+4. Copy `ShadowedUnitFrames.lua` to `ShadowedUnitFrames-WorgenFix.lua`. Replace the destination only after preserving its backup.
+5. Open the copied `ShadowedUnitFrames-WorgenFix.lua` in a plain-text editor.
+6. Change only the top-level SavedVariables assignment near the beginning of the file:
+
+   ```lua
+   ShadowedUFDB = {
+   ```
+
+   to:
+
+   ```lua
+   ShadowedUFDBWorgenFix = {
+   ```
+
+7. Leave the contents of the database table unchanged and save the file.
+8. Start WoW with `ShadowedUnitFrames-WorgenFix` and `ShadowedUF_Options-WorgenFix` enabled. Keep the original `ShadowedUnitFrames` and `ShadowedUF_Options` addons disabled while using the fork.
+
+The fork will now load a copy of the original profiles without modifying the original `ShadowedUnitFrames.lua` file. If the migrated configuration causes a problem, close WoW and restore or remove the copied `ShadowedUnitFrames-WorgenFix.lua` file.
 
 ## Repository Layout
 

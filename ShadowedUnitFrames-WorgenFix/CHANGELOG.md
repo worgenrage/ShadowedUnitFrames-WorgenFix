@@ -1,5 +1,10 @@
 # Shadowed Unit Frames - Worgen Fix
 
+## v4.3.9-classic-worgenfix.3 (2026-08-13)
+
+- Added manual migration instructions for copying existing `ShadowedUFDB` profiles into `ShadowedUFDBWorgenFix`.
+- Added backup, rollback, and original-addon conflict precautions to the migration guide.
+
 ## v4.3.9-classic-worgenfix.2 (2026-08-13)
 
 - Added explicit original author, upstream maintainer, source, and fork modification attribution.

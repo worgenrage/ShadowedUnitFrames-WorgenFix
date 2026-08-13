@@ -1,5 +1,10 @@
 # Shadowed UF - Worgen Fix (Options)
 
+## v4.3.9-classic-worgenfix.3 (2026-08-13)
+
+- Documented that profile migration is handled through the core addon's SavedVariables file.
+- Linked the options package documentation to the core migration guide.
+
 ## v4.3.9-classic-worgenfix.2 (2026-08-13)
 
 - Added explicit upstream and fork modification credits to the General options.

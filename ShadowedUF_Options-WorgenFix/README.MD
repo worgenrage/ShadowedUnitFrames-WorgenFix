@@ -29,6 +29,10 @@ The core addon is required. Open the configuration using `/suf` or `/shadoweduf`
 
 Do not rename either addon directory. WoW uses the directory and TOC names to resolve the dependency between the options addon and the core addon.
 
+## Migrating An Existing SUF Configuration
+
+Profiles and layouts belong to the core addon; this options addon has no separate SavedVariables file. Follow the migration instructions in the core addon's [`README.MD`](../ShadowedUnitFrames-WorgenFix/README.MD#migrating-an-existing-suf-configuration) before starting WoW.
+
 ## Attribution And Licensing
 
 Shadowed Unit Frames was originally created by Shadowed. This fork is based on v4.3.9-classic from the upstream project maintained by Hendrik Leppkes (Nevcairiel). Christian Hamar is credited only for the WorgenFix-specific compatibility modifications and does not claim authorship or ownership of the original Shadowed Unit Frames code.
