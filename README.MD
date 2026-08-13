@@ -114,8 +114,8 @@ The fork will now load a copy of the original profiles without modifying the ori
 
 ## Attribution And Licensing
 
-Christian Hamar is credited only for the WorgenFix-specific compatibility modifications and does not claim authorship or ownership of the original Shadowed Unit Frames code.
+Shadowed Unit Frames remains the work of its original creator, Shadowed, and its upstream contributors. WorgenFix builds directly on the v4.3.9-classic release maintained by Hendrik Leppkes (Nevcairiel); Christian Hamar maintains only the narrowly scoped Classic Era compatibility adjustments in this distribution.
 
-The official CurseForge project is marked **All Rights Reserved**. Public redistribution of the complete fork requires permission from the applicable copyright holders. Source availability alone does not grant an open-source redistribution license.
+WorgenFix is an independent, unofficial compatibility build and is not affiliated with or endorsed by the original project or its maintainers. All rights in the original Shadowed Unit Frames code remain with their respective copyright holders. The official CurseForge project is marked **All Rights Reserved**.
 
 See [LICENSE.MD](LICENSE.MD), [ATTRIBUTION.md](ATTRIBUTION.md), [THIRD_PARTY_LICENSES.MD](THIRD_PARTY_LICENSES.MD), and [CHANGELOG.md](CHANGELOG.md).

@@ -13,6 +13,7 @@ The core and options addons are versioned and released together.
 - Expanded the Credits tab with the original CurseForge project, original GitHub repository, maintained upstream repository, exact source release, and WorgenFix repository and release links.
 - Reworked the Credits tab into readable sections explaining the original addon, the fork lineage, and the scope of the WorgenFix compatibility changes.
 - Rewrote the README files to clarify that WorgenFix is a minimal SUF compatibility patch for target-frame debuffs affected by the Classic Era 1.15.8 API changes, and added an explicit as-is disclaimer.
+- Refined the attribution wording to describe the upstream lineage and WorgenFix's independent, narrowly scoped maintenance role more naturally.
 
 ## v4.3.9-classic-worgenfix.2 (2026-08-13)
 

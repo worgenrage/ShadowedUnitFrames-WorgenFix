@@ -43,8 +43,8 @@ Profiles and layouts belong to the core addon; this options addon has no separat
 
 ## Attribution And Licensing
 
-Shadowed Unit Frames was originally created by Shadowed. This fork is based on v4.3.9-classic from the upstream project maintained by Hendrik Leppkes (Nevcairiel). Christian Hamar is credited only for the WorgenFix-specific compatibility modifications and does not claim authorship or ownership of the original Shadowed Unit Frames code.
+Shadowed Unit Frames remains the work of its original creator, Shadowed, and its upstream contributors. WorgenFix builds directly on the v4.3.9-classic release maintained by Hendrik Leppkes (Nevcairiel); Christian Hamar maintains only the narrowly scoped Classic Era compatibility adjustments in this distribution.
 
 See [LICENSE.MD](LICENSE.MD) and [THIRD_PARTY_LICENSES.MD](THIRD_PARTY_LICENSES.MD) before redistributing this package.
 
-The official CurseForge project is currently marked **All Rights Reserved**. Public redistribution of this complete fork requires permission from the applicable copyright holders. Availability of the source code does not by itself grant an open-source redistribution license.
+WorgenFix is an independent, unofficial compatibility build and is not affiliated with or endorsed by the original project or its maintainers. All rights in the original Shadowed Unit Frames code remain with their respective copyright holders. The official CurseForge project is currently marked **All Rights Reserved**.

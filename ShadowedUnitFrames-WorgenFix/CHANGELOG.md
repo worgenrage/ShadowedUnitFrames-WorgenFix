@@ -7,6 +7,7 @@
 - Added localization strings for the dedicated Credits tab.
 - Added English UI text explaining the original project, fork lineage, and WorgenFix compatibility scope.
 - Clarified the README's minimal target-debuff fix scope and added an as-is disclaimer.
+- Refined the README attribution and independent-project wording.
 
 ## v4.3.9-classic-worgenfix.2 (2026-08-13)
 

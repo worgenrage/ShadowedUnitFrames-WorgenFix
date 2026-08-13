@@ -8,6 +8,7 @@
 - Expanded the Credits tab with explicit original, upstream, source-release, fork, and release links.
 - Reworked the Credits tab into readable project history and WorgenFix change summaries.
 - Clarified that the options package belongs to the minimal SUF compatibility fix and added an as-is disclaimer.
+- Refined the README attribution and independent-project wording.
 
 ## v4.3.9-classic-worgenfix.2 (2026-08-13)
 

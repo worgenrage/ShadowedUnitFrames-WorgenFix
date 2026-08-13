@@ -9,6 +9,8 @@ ShadowedUnitFrames-WorgenFix and ShadowedUF_Options-WorgenFix are related forks 
 - Original project page: <https://www.curseforge.com/wow/addons/shadowed-unit-frames/>
 - WorgenFix compatibility modifications: **Christian Hamar**.
 
-The original project name and author attribution are retained to identify the source of the fork. Christian Hamar is credited only for the WorgenFix-specific modifications and does not claim authorship or ownership of the original Shadowed Unit Frames code.
+Shadowed Unit Frames remains the work of its original creator, Shadowed, and its upstream contributors. WorgenFix builds directly on the v4.3.9-classic release maintained by Hendrik Leppkes (Nevcairiel); Christian Hamar maintains only the narrowly scoped Classic Era compatibility adjustments in this distribution.
+
+WorgenFix is an independent, unofficial compatibility build and is not affiliated with or endorsed by the original project or its maintainers. All rights in the original Shadowed Unit Frames code remain with their respective copyright holders.
 
 No standalone license file was included in the upstream v4.3.9-classic source imported into this repository. This attribution notice does not add, replace, or reinterpret the upstream project's licensing terms.
