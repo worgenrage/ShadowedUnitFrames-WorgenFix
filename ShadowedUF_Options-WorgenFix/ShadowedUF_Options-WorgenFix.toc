@@ -1,10 +1,15 @@
 ## Interface: 11509
 ## Title: Shadowed UF - Worgen Fix (Options)
 ## Notes: Configuration for Shadowed Unit Frames - Worgen Fix.
-## Author: Shadowed; ShadowedUnitFrames-WorgenFix contributors
-## Version: v4.3.9-classic-worgenfix.1
+## Author: Shadowed (original author); Hendrik Leppkes / Nevcairiel (upstream maintainer); Christian Hamar (WorgenFix modifications)
+## Version: v4.3.9-classic-worgenfix.2
 ## LoadOnDemand: true
 ## Dependencies: ShadowedUnitFrames-WorgenFix
+## X-Original-Project: Shadowed Unit Frames
+## X-Original-Author: Shadowed
+## X-Original-Source: https://github.com/Nevcairiel/ShadowedUnitFrames/tree/v4.3.9-classic
+## X-Original-Website: https://www.wowace.com/addons/shadowed-unit-frames/
+## X-Fork-Maintainer: Christian Hamar
 
 #@no-lib-strip@
 libs\AceDBOptions-3.0\AceDBOptions-3.0.xml

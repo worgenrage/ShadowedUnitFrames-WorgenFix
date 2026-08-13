@@ -813,6 +813,19 @@ local function loadGeneralOptions()
 							},
 						},
 					},
+					credits = {
+						order = 1.75,
+						type = "group",
+						inline = true,
+						name = L["Credits"],
+						args = {
+							attribution = {
+								order = 1,
+								type = "description",
+								name = L["Shadowed Unit Frames was originally created by Shadowed. This fork is based on v4.3.9-classic from the upstream project maintained by Hendrik Leppkes (Nevcairiel). WorgenFix compatibility modifications are by Christian Hamar."],
+							},
+						},
+					},
 					backdrop = {
 						order = 2,
 						type = "group",

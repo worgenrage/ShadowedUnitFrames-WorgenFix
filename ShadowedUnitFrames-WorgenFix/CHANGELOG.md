@@ -1,5 +1,11 @@
 # Shadowed Unit Frames - Worgen Fix
 
+## v4.3.9-classic-worgenfix.2 (2026-08-13)
+
+- Added explicit original author, upstream maintainer, source, and fork modification attribution.
+- Added detailed installation, project identity, upstream URL, and compatibility information to the README.
+- Added license status and third-party component documentation to the distribution.
+
 ## v4.3.9-classic-worgenfix.1 (2026-08-13)
 
 - Created the initial fork from Shadowed Unit Frames v4.3.9-classic.

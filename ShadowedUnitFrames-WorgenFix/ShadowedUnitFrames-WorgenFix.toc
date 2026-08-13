@@ -1,11 +1,14 @@
 ## Interface: 11509
 ## Title: Shadowed Unit Frames - Worgen Fix
 ## Notes: Shadowed Unit Frames fork with fixes for Worgen characters.
-## Author: Shadowed; ShadowedUnitFrames-WorgenFix contributors
-## Version: v4.3.9-classic-worgenfix.1
+## Author: Shadowed (original author); Hendrik Leppkes / Nevcairiel (upstream maintainer); Christian Hamar (WorgenFix modifications)
+## Version: v4.3.9-classic-worgenfix.2
 ## SavedVariables: ShadowedUFDBWorgenFix
 ## X-Original-Project: Shadowed Unit Frames
+## X-Original-Author: Shadowed
+## X-Original-Source: https://github.com/Nevcairiel/ShadowedUnitFrames/tree/v4.3.9-classic
 ## X-Original-Website: https://www.wowace.com/addons/shadowed-unit-frames/
+## X-Fork-Maintainer: Christian Hamar
 ## OptionalDeps: Ace3, LibSharedMedia-3.0, AceGUI-3.0-SharedMediaWidgets, LibSpellRange-1.0, UTF8, Clique, LibClassicDurations, LibClassicCasterino
 
 #@no-lib-strip@

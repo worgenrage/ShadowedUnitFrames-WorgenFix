@@ -1,5 +1,11 @@
 # Shadowed UF - Worgen Fix (Options)
 
+## v4.3.9-classic-worgenfix.2 (2026-08-13)
+
+- Added explicit upstream and fork modification credits to the General options.
+- Added detailed project identity, upstream URLs, and installation information to the README.
+- Added license status and third-party component documentation to the distribution.
+
 ## v4.3.9-classic-worgenfix.1 (2026-08-13)
 
 - Created the initial options fork from Shadowed Unit Frames v4.3.9-classic.
