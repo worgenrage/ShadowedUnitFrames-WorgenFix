@@ -4,6 +4,7 @@
 
 - Documented that profile migration is handled through the core addon's SavedVariables file.
 - Linked the options package documentation to the core migration guide.
+- Moved fork attribution from General to a dedicated Credits tab with project links and release information.
 
 ## v4.3.9-classic-worgenfix.2 (2026-08-13)
 

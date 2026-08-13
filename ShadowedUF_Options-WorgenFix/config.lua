@@ -813,19 +813,6 @@ local function loadGeneralOptions()
 							},
 						},
 					},
-					credits = {
-						order = 1.75,
-						type = "group",
-						inline = true,
-						name = L["Credits"],
-						args = {
-							attribution = {
-								order = 1,
-								type = "description",
-								name = L["Shadowed Unit Frames was originally created by Shadowed. This fork is based on v4.3.9-classic from the upstream project maintained by Hendrik Leppkes (Nevcairiel). WorgenFix compatibility modifications are by Christian Hamar."],
-							},
-						},
-					},
 					backdrop = {
 						order = 2,
 						type = "group",
@@ -6933,6 +6920,69 @@ local function loadOptions()
 	loadVisibilityOptions()
 	loadAuraIndicatorsOptions()
 
+	options.args.credits = {
+		type = "group",
+		name = L["Credits"],
+		args = {
+			project = {
+				order = 1,
+				type = "group",
+				inline = true,
+				name = L["Shadowed Unit Frames - Worgen Fix"],
+				args = {
+					attribution = {
+						order = 1,
+						type = "description",
+						fontSize = "medium",
+						name = L["Shadowed Unit Frames was originally created by Shadowed. This fork is based on v4.3.9-classic from the upstream project maintained by Hendrik Leppkes (Nevcairiel). WorgenFix compatibility modifications are by Christian Hamar."],
+					},
+					version = {
+						order = 2,
+						type = "description",
+						name = L["Fork version: v4.3.9-classic-worgenfix.3"],
+					},
+					status = {
+						order = 3,
+						type = "description",
+						name = L["This is an unofficial compatibility fork. The original Shadowed Unit Frames project is marked All Rights Reserved."],
+					},
+				},
+			},
+			links = {
+				order = 2,
+				type = "group",
+				inline = true,
+				name = L["Project links"],
+				args = {
+					originalProject = {
+						order = 1,
+						type = "input",
+						name = L["Original CurseForge project"],
+						get = function() return "https://www.curseforge.com/wow/addons/shadowed-unit-frames" end,
+						set = false,
+						width = "full",
+					},
+					upstreamSource = {
+						order = 2,
+						type = "input",
+						name = L["Upstream source"],
+						get = function() return "https://github.com/Nevcairiel/ShadowedUnitFrames/tree/v4.3.9-classic" end,
+						set = false,
+						width = "full",
+					},
+					forkSource = {
+						order = 3,
+						type = "input",
+						name = L["WorgenFix source and releases"],
+						get = function() return "https://github.com/worgenrage/ShadowedUnitFrames-WorgenFix" end,
+						set = false,
+						width = "full",
+					},
+				},
+			},
+		},
+	}
+
 	-- Ordering
 	options.args.general.order = 1
 	options.args.profile.order = 1.5
@@ -6943,6 +6993,7 @@ local function loadOptions()
 	options.args.hideBlizzard.order = 5
 	options.args.visibility.order = 6
 	options.args.tags.order = 7
+	options.args.credits.order = 8
 
 	-- So modules can access it easier/debug
 	Config.options = options

@@ -9,6 +9,7 @@ The core and options addons are versioned and released together.
 - Added documented manual migration steps for copying existing Shadowed Unit Frames profiles into the isolated WorgenFix SavedVariables database.
 - Clarified that the core and options addons share the core SavedVariables data and must be installed together.
 - Added backup, rollback, and original-addon conflict precautions to the migration guide.
+- Moved fork attribution from the bottom of General to a dedicated Credits tab with project links and release information.
 
 ## v4.3.9-classic-worgenfix.2 (2026-08-13)
 
