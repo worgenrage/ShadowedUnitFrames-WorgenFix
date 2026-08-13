@@ -1,6 +1,8 @@
 # Shadowed UF - Worgen Fix (Options)
 
-ShadowedUF_Options-WorgenFix is the separate, load-on-demand configuration addon for the unofficial ShadowedUnitFrames-WorgenFix compatibility fork.
+ShadowedUF_Options-WorgenFix is the separate, load-on-demand configuration component shipped with ShadowedUnitFrames-WorgenFix. It is not a new options system or a standalone addon; it preserves the original SUF configuration interface for the minimally modified compatibility build.
+
+The WorgenFix package primarily restores target-frame debuff icons affected by Blizzard's Classic Era 1.15.8 API changes. The current target client is 1.15.9.
 
 ## Project Information
 
@@ -28,6 +30,12 @@ Install both addon folders directly under `World of Warcraft/_classic_era_/Inter
 The core addon is required. Open the configuration using `/suf` or `/shadoweduf`.
 
 Do not rename either addon directory. WoW uses the directory and TOC names to resolve the dependency between the options addon and the core addon.
+
+## Disclaimer
+
+This unofficial package is provided **as is** and is used at your own risk. No warranty or guarantee of stability, compatibility, data integrity, or continued maintenance is provided. The WorgenFix maintainer accepts no responsibility for addon errors, Lua errors, client crashes, lost or damaged settings, gameplay disruption, or other damage arising from its installation or use, to the extent permitted by applicable law.
+
+Back up your WoW `WTF` directory and SavedVariables before installing or migrating settings.
 
 ## Migrating An Existing SUF Configuration
 

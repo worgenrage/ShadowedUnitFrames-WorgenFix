@@ -1,6 +1,8 @@
 # Shadowed Unit Frames - Worgen Fix
 
-ShadowedUnitFrames-WorgenFix is an unofficial, compatibility-focused fork of **Shadowed Unit Frames v4.3.9-classic** for WoW Classic Era and Hardcore 1.15.9.
+ShadowedUnitFrames-WorgenFix is not a new unit-frame addon. It is an unofficial, minimally modified build of **Shadowed Unit Frames v4.3.9-classic** for WoW Classic Era and Hardcore.
+
+Its primary purpose is to restore debuff icons below the target unit frame after Blizzard's Classic Era 1.15.8 API changes. The current target client is 1.15.9. It does not attempt to redesign SUF, add a new feature set, or change normal SUF profile and aura-filter behavior.
 
 This repository contains two related addons that are developed, versioned, tested, and released together:
 
@@ -29,21 +31,19 @@ Official and upstream links:
 - Exact upstream release used by this fork: <https://github.com/Nevcairiel/ShadowedUnitFrames/tree/v4.3.9-classic>
 - WorgenFix releases: <https://github.com/worgenrage/ShadowedUnitFrames-WorgenFix/releases>
 
-## Why This Fork Exists
+## What This Fix Does
 
-WoW Classic Era 1.15.9 changed parts of the Blizzard UI environment used by Shadowed Unit Frames. The upstream Classic release can fail while rendering auras when legacy debuff color data is unavailable, and other legacy Blizzard frame assumptions can also cause compatibility problems.
+WoW Classic Era 1.15.8 changed Blizzard UI APIs and data used by Shadowed Unit Frames. With the unmodified v4.3.9-classic release, target-frame debuff rendering can stop with a Lua error, causing debuff icons to disappear even though the same debuffs remain visible on Blizzard nameplates.
 
-The fork keeps the original architecture, Lua identifiers, profile behavior, and localizations while adding narrowly scoped compatibility handling for the current Classic Era client.
+WorgenFix adds narrow compatibility fallbacks so SUF can render those target debuffs again on the current Classic Era client. Supporting guards are included only where the same changed API assumptions could cause related loading or rendering errors.
 
-## Main Changes
+The original SUF architecture, Lua identifiers, configuration, profiles, aura filters, and general behavior are intentionally left unchanged wherever possible. This package is a compatibility fix, not a separate successor to SUF.
 
-- Shared fallback for unavailable Blizzard debuff color data.
-- Compatibility handling for modern Classic cast bar and buff frame APIs.
-- Automatic, modern, and legacy Classic UI API modes.
-- Nil-safe handling of unavailable legacy Blizzard frames.
-- Dynamic addon asset paths.
-- Separate `ShadowedUFDBWorgenFix` SavedVariables database.
-- Explicit upstream attribution and third-party notices.
+## Disclaimer
+
+This unofficial package is provided **as is**, without warranty or a guarantee of stability, compatibility, data integrity, or continued maintenance. Use it at your own risk. The WorgenFix maintainer accepts no responsibility for addon errors, Lua errors, client crashes, lost or damaged settings, gameplay disruption, or any other direct or indirect damage arising from its installation or use, to the extent permitted by applicable law.
+
+Back up your WoW `WTF` directory and SavedVariables before installing or migrating settings. This disclaimer applies only to the WorgenFix distribution and does not speak for the original Shadowed Unit Frames authors or upstream maintainers.
 
 ## Installation
 
