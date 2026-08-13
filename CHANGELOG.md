@@ -11,6 +11,7 @@ The core and options addons are versioned and released together.
 - Added backup, rollback, and original-addon conflict precautions to the migration guide.
 - Moved fork attribution from the bottom of General to a dedicated Credits tab with project links and release information.
 - Expanded the Credits tab with the original CurseForge project, original GitHub repository, maintained upstream repository, exact source release, and WorgenFix repository and release links.
+- Reworked the Credits tab into readable sections explaining the original addon, the fork lineage, and the scope of the WorgenFix compatibility changes.
 
 ## v4.3.9-classic-worgenfix.2 (2026-08-13)
 

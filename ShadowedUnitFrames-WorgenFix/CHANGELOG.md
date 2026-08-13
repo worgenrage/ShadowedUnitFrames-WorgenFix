@@ -5,6 +5,7 @@
 - Added manual migration instructions for copying existing `ShadowedUFDB` profiles into `ShadowedUFDBWorgenFix`.
 - Added backup, rollback, and original-addon conflict precautions to the migration guide.
 - Added localization strings for the dedicated Credits tab.
+- Added English UI text explaining the original project, fork lineage, and WorgenFix compatibility scope.
 
 ## v4.3.9-classic-worgenfix.2 (2026-08-13)
 

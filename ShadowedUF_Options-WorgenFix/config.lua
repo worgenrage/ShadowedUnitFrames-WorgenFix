@@ -6930,19 +6930,44 @@ local function loadOptions()
 				inline = true,
 				name = L["Shadowed Unit Frames - Worgen Fix"],
 				args = {
-					attribution = {
+					originalHeading = {
 						order = 1,
+						type = "header",
+						name = L["The original project"],
+					},
+					originalDescription = {
+						order = 2,
 						type = "description",
 						fontSize = "medium",
-						name = L["Shadowed Unit Frames was originally created by Shadowed. This unofficial fork is derived from Shadowed Unit Frames v4.3.9-classic, from the upstream project maintained by Hendrik Leppkes (Nevcairiel). WorgenFix compatibility modifications are by Christian Hamar. The complete source history and project links are listed below."],
+						name = L["Shadowed Unit Frames is a highly configurable unit-frame addon originally created by Shadowed. It replaces or supplements Blizzard unit frames while preserving profiles, layouts, tags, auras, and the extensive configuration system familiar to SUF users."],
+					},
+					lineageHeading = {
+						order = 3,
+						type = "header",
+						name = L["How this fork was created"],
+					},
+					lineageDescription = {
+						order = 4,
+						type = "description",
+						name = L["This unofficial fork was created from Shadowed Unit Frames v4.3.9-classic, published through the upstream project maintained by Hendrik Leppkes (Nevcairiel). The original addon structure, features, profiles, and internal ShadowUF identifiers remain intact wherever possible."],
+					},
+					changesHeading = {
+						order = 5,
+						type = "header",
+						name = L["What WorgenFix changes"],
+					},
+					changesDescription = {
+						order = 6,
+						type = "description",
+						name = L["Christian Hamar maintains the WorgenFix modifications. They add WoW Classic Era 1.15.8 and 1.15.9 compatibility handling, safe fallbacks for changed Blizzard APIs and data, an adjustable client API mode, isolated SavedVariables, and fork-specific packaging and documentation. Aura filtering and normal SUF profile behavior are intentionally preserved."],
 					},
 					version = {
-						order = 2,
+						order = 7,
 						type = "description",
 						name = L["Fork version: v4.3.9-classic-worgenfix.3"],
 					},
 					status = {
-						order = 3,
+						order = 8,
 						type = "description",
 						name = L["This is an unofficial compatibility fork. The original Shadowed Unit Frames project is marked All Rights Reserved."],
 					},
