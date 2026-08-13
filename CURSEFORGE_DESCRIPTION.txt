@@ -1,0 +1,90 @@
+Shadowed Unit Frames - Worgen Fix
+
+This is a SUF fix, not a new addon.
+
+ShadowedUnitFrames-WorgenFix is an unofficial, minimally modified build of the original Shadowed Unit Frames v4.3.9-classic addon for WoW Classic Era and Hardcore.
+
+Blizzard's Classic Era 1.15.8 API changes can cause the unmodified SUF release to stop while rendering target debuffs. As a result, debuff icons disappear below the target unit frame even though Blizzard nameplates still display them.
+
+WorgenFix adds narrowly scoped compatibility fallbacks that restore target-frame debuff icons on Classic Era 1.15.8 and later, including 1.15.9.
+
+The original SUF architecture, Lua identifiers, profiles, configuration, aura filters, and normal behavior are intentionally preserved wherever possible. This project does not introduce a new unit-frame system or a new feature set.
+
+IMPORTANT: EXISTING SUF SETTINGS ARE NOT IMPORTED AUTOMATICALLY
+
+WorgenFix uses a separate SavedVariables database to avoid modifying or mixing with the original addon's data. A fresh WorgenFix installation therefore starts with its own settings.
+
+To reuse your existing SUF profiles and layouts, you must copy and rename the SavedVariables file manually while WoW is completely closed. Follow the manual migration instructions before starting the game:
+
+https://github.com/worgenrage/ShadowedUnitFrames-WorgenFix#migrating-an-existing-suf-configuration
+
+INSTALLATION
+
+Both addon packages are required:
+
+ShadowedUnitFrames-WorgenFix
+ShadowedUF_Options-WorgenFix
+
+Extract both folders into:
+
+World of Warcraft/_classic_era_/Interface/AddOns/
+
+The resulting file structure should include:
+
+Interface/AddOns/ShadowedUnitFrames-WorgenFix/ShadowedUnitFrames-WorgenFix.toc
+Interface/AddOns/ShadowedUF_Options-WorgenFix/ShadowedUF_Options-WorgenFix.toc
+
+Do not rename either addon directory. Restart the WoW client completely after installation because /reload does not detect newly installed addon directories.
+
+Open the addon configuration with:
+
+/suf
+
+SAVEDVARIABLES
+
+WorgenFix uses a separate SavedVariables database named ShadowedUFDBWorgenFix. It does not automatically import, modify, or share the original addon's ShadowedUFDB database.
+
+Existing SUF profiles can be migrated manually. Close WoW completely and follow the migration instructions available in the project README:
+
+https://github.com/worgenrage/ShadowedUnitFrames-WorgenFix#migrating-an-existing-suf-configuration
+
+ORIGINAL PROJECT AND CREDITS
+
+Shadowed Unit Frames remains the work of its original creator, Shadowed, and its upstream contributors.
+
+WorgenFix builds directly on the Shadowed Unit Frames v4.3.9-classic release maintained by Hendrik Leppkes (Nevcairiel). Christian Hamar maintains only the narrowly scoped Classic Era compatibility adjustments included in this distribution.
+
+WorgenFix is an independent, unofficial compatibility build. It is not affiliated with or endorsed by the original Shadowed Unit Frames project or its maintainers.
+
+Original CurseForge project:
+https://www.curseforge.com/wow/addons/shadowed-unit-frames
+
+Original GitHub repository:
+https://github.com/Shadowed/ShadowedUnitFrames
+
+Maintained upstream repository:
+https://github.com/Nevcairiel/ShadowedUnitFrames
+
+Exact upstream release used by WorgenFix:
+https://github.com/Nevcairiel/ShadowedUnitFrames/tree/v4.3.9-classic
+
+WorgenFix source and releases:
+https://github.com/worgenrage/ShadowedUnitFrames-WorgenFix
+
+DISCLAIMER
+
+This unofficial package is provided as is, without warranty or any guarantee of stability, compatibility, data integrity, or continued maintenance. Use it entirely at your own risk.
+
+The WorgenFix maintainer accepts no responsibility for addon errors, Lua errors, client crashes, lost or damaged settings, gameplay disruption, or any other direct or indirect damage arising from installation or use, to the extent permitted by applicable law.
+
+Back up your World of Warcraft WTF directory and SavedVariables before installing the addon or migrating existing settings.
+
+All rights in the original Shadowed Unit Frames code remain with their respective copyright holders. The official CurseForge project is marked All Rights Reserved.
+
+SUPPORT WORGENFIX
+
+If this compatibility fix helped you, you can optionally support its continued maintenance with a 3 EUR contribution:
+
+https://paypal.me/worgenrage/3EUR
+
+Support applies only to the independent WorgenFix compatibility work, not to the original Shadowed Unit Frames project.

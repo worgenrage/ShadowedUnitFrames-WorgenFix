@@ -2,6 +2,15 @@
 
 The core and options addons are versioned and released together.
 
+## v4.3.9-classic-worgenfix.4 (2026-08-13)
+
+### Shared
+
+- Added a prominent README warning that existing SUF settings are not imported automatically and require manual SavedVariables migration.
+- Added a paste-ready CurseForge project description with installation, migration, attribution, disclaimer, and optional support information.
+- Added an original WorgenFix project icon for CurseForge and repository use.
+- Added an optional PayPal link for supporting the independent WorgenFix compatibility work.
+
 ## v4.3.9-classic-worgenfix.3 (2026-08-13)
 
 ### Shared

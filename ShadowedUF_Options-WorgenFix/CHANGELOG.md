@@ -1,5 +1,10 @@
 # Shadowed UF - Worgen Fix (Options)
 
+## v4.3.9-classic-worgenfix.4 (2026-08-13)
+
+- Updated the in-game Credits version for the WorgenFix 4 release.
+- Synchronized the options package version with the core addon.
+
 ## v4.3.9-classic-worgenfix.3 (2026-08-13)
 
 - Documented that profile migration is handled through the core addon's SavedVariables file.

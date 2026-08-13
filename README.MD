@@ -4,6 +4,9 @@ ShadowedUnitFrames-WorgenFix is not a new unit-frame addon. It is an unofficial,
 
 Its primary purpose is to restore debuff icons below the target unit frame after Blizzard's Classic Era 1.15.8 API changes. The current target client is 1.15.9. It does not attempt to redesign SUF, add a new feature set, or change normal SUF profile and aura-filter behavior.
 
+> [!IMPORTANT]
+> **Your existing Shadowed Unit Frames settings are not imported automatically.** WorgenFix uses a separate SavedVariables database to avoid modifying or mixing with the original addon's data. A fresh WorgenFix installation therefore starts with its own settings. To reuse your existing SUF profiles and layouts, you must copy and rename the SavedVariables file manually while WoW is completely closed. Follow the [manual migration instructions](#migrating-an-existing-suf-configuration) before starting the game.
+
 This repository contains two related addons that are developed, versioned, tested, and released together:
 
 | Addon | Purpose | Directory |
@@ -20,7 +23,7 @@ The options addon depends on the core addon. Both packages use the same release 
 - Upstream maintainer: **Hendrik Leppkes** (`Nevcairiel`)
 - WorgenFix modifications: **Christian Hamar**
 - Upstream version used: **v4.3.9-classic**
-- Current fork version: **v4.3.9-classic-worgenfix.3**
+- Current fork version: **v4.3.9-classic-worgenfix.4**
 - Target client: **WoW Classic Era / Hardcore 1.15.9**
 
 Official and upstream links:
@@ -119,3 +122,9 @@ Shadowed Unit Frames remains the work of its original creator, Shadowed, and its
 WorgenFix is an independent, unofficial compatibility build and is not affiliated with or endorsed by the original project or its maintainers. All rights in the original Shadowed Unit Frames code remain with their respective copyright holders. The official CurseForge project is marked **All Rights Reserved**.
 
 See [LICENSE.MD](LICENSE.MD), [ATTRIBUTION.md](ATTRIBUTION.md), [THIRD_PARTY_LICENSES.MD](THIRD_PARTY_LICENSES.MD), and [CHANGELOG.md](CHANGELOG.md).
+
+## Support WorgenFix
+
+If this compatibility fix helped you, you can optionally support its continued maintenance with a [3 EUR contribution through PayPal](https://paypal.me/worgenrage/3EUR).
+
+Support applies only to the independent WorgenFix compatibility work, not to the original Shadowed Unit Frames project.
