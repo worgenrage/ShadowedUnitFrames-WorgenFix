@@ -23,7 +23,7 @@ The options addon depends on the core addon. Both packages use the same release 
 - Upstream maintainer: **Hendrik Leppkes** (`Nevcairiel`)
 - WorgenFix modifications: **Christian Hamar**
 - Upstream version used: **v4.3.9-classic**
-- Current fork version: **v4.3.9-classic-worgenfix.4**
+- Current fork version: **v4.3.9-classic-worgenfix.5**
 - Target client: **WoW Classic Era / Hardcore 1.15.9**
 
 Official and upstream links:
@@ -50,7 +50,7 @@ Back up your WoW `WTF` directory and SavedVariables before installing or migrati
 
 ## Installation
 
-Download both ZIP files from the [latest release](https://github.com/worgenrage/ShadowedUnitFrames-WorgenFix/releases/latest) and extract them under:
+Download the release ZIP from the [latest release](https://github.com/worgenrage/ShadowedUnitFrames-WorgenFix/releases/latest) and extract both addon folders under:
 
 ```text
 World of Warcraft/_classic_era_/Interface/AddOns/
@@ -113,7 +113,7 @@ The fork will now load a copy of the original profiles without modifying the ori
 - `ShadowedUnitFrames-WorgenFix/`: release-ready core addon.
 - `ShadowedUF_Options-WorgenFix/`: release-ready options addon.
 - `sources/`: unmodified upstream reference source used to produce and compare the fork.
-- `release/`: locally generated ZIP packages; intentionally excluded from Git.
+- `release/`: locally generated release ZIPs; intentionally excluded from Git.
 
 ## Attribution And Licensing
 

@@ -20,7 +20,7 @@ https://github.com/worgenrage/ShadowedUnitFrames-WorgenFix#migrating-an-existing
 
 INSTALLATION
 
-Both addon packages are required:
+The release ZIP contains both required addon folders:
 
 ShadowedUnitFrames-WorgenFix
 ShadowedUF_Options-WorgenFix

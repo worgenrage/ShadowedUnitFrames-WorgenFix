@@ -2,7 +2,7 @@
 ## Title: Shadowed Unit Frames - Worgen Fix
 ## Notes: Shadowed Unit Frames fork with fixes for Worgen characters.
 ## Author: Shadowed (original author); Hendrik Leppkes / Nevcairiel (upstream maintainer); Christian Hamar (WorgenFix modifications)
-## Version: v4.3.9-classic-worgenfix.4
+## Version: v4.3.9-classic-worgenfix.5
 ## SavedVariables: ShadowedUFDBWorgenFix
 ## X-Original-Project: Shadowed Unit Frames
 ## X-Original-Author: Shadowed

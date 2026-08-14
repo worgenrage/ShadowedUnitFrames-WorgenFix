@@ -2,6 +2,13 @@
 
 The core and options addons are versioned and released together.
 
+## v4.3.9-classic-worgenfix.5 (2026-08-14)
+
+### Shared
+
+- Documented that releases should ship as one ZIP containing both WorgenFix addon folders.
+- Synchronized the core and options addon versions for the WorgenFix 5 release.
+
 ## v4.3.9-classic-worgenfix.4 (2026-08-13)
 
 ### Shared
