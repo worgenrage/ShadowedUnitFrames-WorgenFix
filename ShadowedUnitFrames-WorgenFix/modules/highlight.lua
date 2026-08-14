@@ -178,7 +178,7 @@ function Highlight:UpdateAura(frame)
 		local id = 0
 		while( true ) do
 			id = id + 1
-			local name, _, _, auraType = UnitDebuff(frame.unit, id)
+			local name, _, _, auraType = ShadowUF.API.UnitAura(frame.unit, id, "HARMFUL")
 			if( not name ) then break end
 			if( auraType == "" ) then auraType = "Enrage" end
 

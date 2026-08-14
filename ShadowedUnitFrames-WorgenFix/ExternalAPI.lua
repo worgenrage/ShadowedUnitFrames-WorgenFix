@@ -42,6 +42,38 @@ function ShadowUF.API.GetPlayerCastingBarFrame()
 	return CastingBarFrame or PlayerCastingBarFrame
 end
 
+local function AuraDataToLegacy(aura)
+	if( type(aura) ~= "table" or type(aura.name) ~= "string" or not aura.icon ) then
+		return nil
+	end
+
+	return aura.name,
+		aura.icon,
+		aura.applications or 0,
+		aura.dispelName,
+		aura.duration or 0,
+		aura.expirationTime or 0,
+		aura.sourceUnit,
+		aura.isStealable,
+		aura.nameplateShowPersonal,
+		aura.spellId or aura.spellID,
+		aura.canApplyAura,
+		aura.isBossAura
+end
+
+function ShadowUF.API.UnitAura(unit, index, filter)
+	if( ShadowUF.API.IsModernClassicUI() and C_UnitAuras and C_UnitAuras.GetAuraDataByIndex ) then
+		return AuraDataToLegacy(C_UnitAuras.GetAuraDataByIndex(unit, index, filter))
+	end
+
+	local name, texture, count, auraType, duration, endTime, caster, isRemovable, nameplateShowPersonal, spellID, canApplyAura, isBossDebuff = UnitAura(unit, index, filter)
+	if( type(name) ~= "string" or not texture ) then
+		return nil
+	end
+
+	return name, texture, count or 0, auraType, duration or 0, endTime or 0, caster, isRemovable, nameplateShowPersonal, spellID, canApplyAura, isBossDebuff
+end
+
 -- Threat colors
 function ShadowUF.API.GetThreatStatusColor(state)
 	if( state == 3 ) then

@@ -1,5 +1,10 @@
 # Shadowed UF - Worgen Fix (Options)
 
+## v4.3.9-classic-worgenfix.6 (2026-08-14)
+
+- Updated the in-game Credits version for the WorgenFix 6 release.
+- Synchronized the options package version with the core addon.
+
 ## v4.3.9-classic-worgenfix.5 (2026-08-14)
 
 - Documented the single-ZIP release packaging expectation for both WorgenFix addon folders.

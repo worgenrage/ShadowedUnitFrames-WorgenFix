@@ -2,6 +2,14 @@
 
 The core and options addons are versioned and released together.
 
+## v4.3.9-classic-worgenfix.6 (2026-08-14)
+
+### Shared
+
+- Normalized modern Classic aura API data before rendering aura icons, indicators, debuff coloring, highlights, tags, and bundled Classic aura/cast helpers.
+- Cleared reused aura buttons when aura groups are disabled or relaid out so stale icons cannot remain visible.
+- Synchronized the core and options addon versions for the WorgenFix 6 release.
+
 ## v4.3.9-classic-worgenfix.5 (2026-08-14)
 
 ### Shared

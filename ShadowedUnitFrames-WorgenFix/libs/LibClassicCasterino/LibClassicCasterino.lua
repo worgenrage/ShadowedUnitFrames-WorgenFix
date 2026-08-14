@@ -47,6 +47,20 @@ local talentDecreased
 local crowdControlAuras
 local FireToUnits
 
+local function GetAuraNameAndSpellID(unit, index, filter)
+    if C_UnitAuras and C_UnitAuras.GetAuraDataByIndex then
+        local aura = C_UnitAuras.GetAuraDataByIndex(unit, index, filter)
+        if aura then
+            return aura.name, aura.spellId or aura.spellID
+        end
+
+        return nil
+    end
+
+    local name, _, _, _, _, _, _, _, _, spellID = UnitAura(unit, index, filter)
+    return name, spellID
+end
+
 f:SetScript("OnEvent", function(self, event, ...)
     return self[event](self, event, ...)
 end)
@@ -318,7 +332,7 @@ end
 local function GetRangedHaste(unit)
     local positiveMul = 1
     for i=1, 100 do
-        local name, _, _, _, _, _, _, _, _, spellID = UnitAura(unit, i, "HELPFUL")
+        local name, spellID = GetAuraNameAndSpellID(unit, i, "HELPFUL")
         if not name then return positiveMul end
         if attackTimeDecreases[spellID] or spellID == 26635 then
             positiveMul = positiveMul * (attackTimeDecreases[spellID] or GetTrollBerserkHaste(unit))
@@ -329,7 +343,7 @@ end
 local function GetCastSlowdown(unit)
     local negativeEx = 1
     for i=1, 100 do
-        local name, _, _, _, _, _, _, _, _, spellID = UnitAura(unit, i, "HARMFUL")
+        local name, spellID = GetAuraNameAndSpellID(unit, i, "HARMFUL")
         if not name then return negativeEx end
         if castTimeIncreases[spellID] then
             negativeEx = math.max(negativeEx, castTimeIncreases[spellID])

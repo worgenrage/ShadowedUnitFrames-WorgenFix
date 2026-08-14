@@ -11,6 +11,31 @@ if WoWClassic and LibClassicDurations then
 	LibClassicDurations:Register("ShadowUF")
 end
 
+local function hideAuraGroup(group)
+	if( not group ) then return end
+
+	group.totalAuras = 0
+	group.temporaryEnchants = 0
+	group.lastTemporary = nil
+	group:SetScript("OnUpdate", nil)
+
+	if( group.buttons ) then
+		for _, button in pairs(group.buttons) do
+			button:Hide()
+			button:SetScript("OnUpdate", nil)
+			button.cooldown:Hide()
+			button.stack:SetText("")
+			button.icon:SetTexture(nil)
+			button.auraID = nil
+			button.spellID = nil
+			button.filter = nil
+			button.unit = nil
+			button.isSelfScaled = nil
+			button:SetScale(1)
+		end
+	end
+end
+
 function Auras:OnEnable(frame)
 	frame.auras = frame.auras or {}
 
@@ -30,12 +55,19 @@ function Auras:OnEnable(frame)
 			end
 		end)
 	else
-		frame.auras.auraFunc = UnitAura
+		frame.auras.auraFunc = ShadowUF.API.UnitAura
 	end
 end
 
 function Auras:OnDisable(frame)
 	frame:UnregisterAll(self)
+	if( frame.auras ) then
+		hideAuraGroup(frame.auras.buffs)
+		hideAuraGroup(frame.auras.debuffs)
+		frame.auras.anchor = nil
+		frame.auras.anchorAurasOn = nil
+		frame.auras.anchorAurasChild = nil
+	end
 
 	if( WoWClassic and LibClassicDurations and frame.unit == "target" ) then
 		LibClassicDurations.UnregisterCallback(frame, "UNIT_BUFF")
@@ -219,7 +251,7 @@ local function showTooltip(self)
 	if( self.filter == "TEMP" ) then
 		GameTooltip:SetInventoryItem("player", self.auraID)
 		self:SetScript("OnUpdate", nil)
-	elseif( self.unit == "target" and not UnitAura(self.unit, self.auraID, self.filter) ) then
+	elseif( self.unit == "target" and not ShadowUF.API.UnitAura(self.unit, self.auraID, self.filter) ) then
 		GameTooltip:SetSpellByID(self.spellID, true, true)
 		self:SetScript("OnUpdate", nil)
 	else
@@ -353,16 +385,8 @@ end
 -- Update aura positions based off of configuration
 function Auras:OnLayoutApplied(frame, config)
 	if( frame.auras ) then
-		if( frame.auras.buffs ) then
-			for _, button in pairs(frame.auras.buffs.buttons) do
-				button:Hide()
-			end
-		end
-		if( frame.auras.debuffs ) then
-			for _, button in pairs(frame.auras.debuffs.buttons) do
-				button:Hide()
-			end
-		end
+		hideAuraGroup(frame.auras.buffs)
+		hideAuraGroup(frame.auras.debuffs)
 	end
 
 	if( not frame.visibility.auras ) then return end

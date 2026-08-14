@@ -4,7 +4,7 @@
 
 - Addon name: `ShadowedUnitFrames-WorgenFix`.
 - Companion options addon name: `ShadowedUF_Options-WorgenFix`.
-- Current version: `v4.3.9-classic-worgenfix.5`.
+- Current version: `v4.3.9-classic-worgenfix.6`.
 - Version format: `v<upstream-version>-classic-worgenfix.<fork-release>`.
 - Keep the version synchronized in both `.toc` files, addon UI, and both `CHANGELOG.md` files.
 - Record every released version in `CHANGELOG.md`.

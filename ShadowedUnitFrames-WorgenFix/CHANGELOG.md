@@ -1,5 +1,11 @@
 # Shadowed Unit Frames - Worgen Fix
 
+## v4.3.9-classic-worgenfix.6 (2026-08-14)
+
+- Normalized modern Classic aura API data before rendering aura icons, indicators, tag aura lookups, debuff coloring, highlights, and bundled Classic aura/cast helpers.
+- Cleared reused aura buttons when aura groups are disabled or relaid out so stale icons cannot remain visible.
+- Synchronized the core package version with the WorgenFix 6 release.
+
 ## v4.3.9-classic-worgenfix.5 (2026-08-14)
 
 - Documented the single-ZIP release packaging expectation for both WorgenFix addon folders.

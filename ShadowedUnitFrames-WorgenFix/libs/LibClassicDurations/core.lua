@@ -83,6 +83,33 @@ local enableEnemyBuffTracking = lib.enableEnemyBuffTracking
 
 local COMBATLOG_OBJECT_CONTROL_PLAYER = COMBATLOG_OBJECT_CONTROL_PLAYER
 
+local function AuraDataToLegacy(aura)
+    if type(aura) ~= "table" or type(aura.name) ~= "string" or not aura.icon then
+        return nil
+    end
+
+    return aura.name,
+        aura.icon,
+        aura.applications or 0,
+        aura.dispelName,
+        aura.duration or 0,
+        aura.expirationTime or 0,
+        aura.sourceUnit,
+        aura.isStealable,
+        aura.nameplateShowPersonal,
+        aura.spellId or aura.spellID,
+        aura.canApplyAura,
+        aura.isBossAura
+end
+
+local function UnitAuraCompat(unit, index, filter)
+    if C_UnitAuras and C_UnitAuras.GetAuraDataByIndex then
+        return AuraDataToLegacy(C_UnitAuras.GetAuraDataByIndex(unit, index, filter))
+    end
+
+    return UnitAura(unit, index, filter)
+end
+
 f:SetScript("OnEvent", function(self, event, ...)
     return self[event](self, event, ...)
 end)
@@ -862,7 +889,7 @@ end
 lib.FillInDuration = FillInDuration
 
 function lib.UnitAuraDirect(unit, index, filter)
-    if enableEnemyBuffTracking and filter == "HELPFUL" and not UnitIsFriend("player", unit) and not UnitAura(unit, 1, filter) then
+    if enableEnemyBuffTracking and filter == "HELPFUL" and not UnitIsFriend("player", unit) and not UnitAuraCompat(unit, 1, filter) then
         local unitGUID = UnitGUID(unit)
         if not unitGUID then return end
         local isValid = buffCacheValid[unitGUID]
@@ -878,7 +905,7 @@ function lib.UnitAuraDirect(unit, index, filter)
             end
         end
     else
-        return FillInDuration(unit, UnitAura(unit, index, filter))
+        return FillInDuration(unit, UnitAuraCompat(unit, index, filter))
     end
 end
 
@@ -887,7 +914,7 @@ function lib.UnitAuraWithBuffs(...)
 end
 
 function lib.UnitAuraWrapper(unit, ...)
-    return lib.FillInDuration(unit, UnitAura(unit, ...))
+    return lib.FillInDuration(unit, UnitAuraCompat(unit, ...))
 end
 
 function lib:UnitAura(...)
