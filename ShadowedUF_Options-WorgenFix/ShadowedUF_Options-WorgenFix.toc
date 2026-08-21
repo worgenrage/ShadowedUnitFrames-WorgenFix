@@ -1,8 +1,8 @@
-## Interface: 11509
+## Interface: 11509,20506
 ## Title: Shadowed UF - Worgen Fix (Options)
 ## Notes: Configuration for Shadowed Unit Frames - Worgen Fix.
 ## Author: Shadowed (original author); Hendrik Leppkes / Nevcairiel (upstream maintainer); Christian Hamar (WorgenFix modifications)
-## Version: v4.3.9-classic-worgenfix.6
+## Version: v4.3.9-classic-worgenfix.7
 ## LoadOnDemand: true
 ## Dependencies: ShadowedUnitFrames-WorgenFix
 ## X-Original-Project: Shadowed Unit Frames

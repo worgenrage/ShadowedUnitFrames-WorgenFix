@@ -1,5 +1,11 @@
 # Shadowed Unit Frames - Worgen Fix
 
+## v4.3.9-classic-worgenfix.7 (2026-08-21)
+
+- Added Burning Crusade Anniversary 2.5.6 (`Interface: 20506`) compatibility metadata while retaining Classic Era / Hardcore 1.15.9 support.
+- Synchronized the core package version with the WorgenFix 7 release.
+- TBC testing was limited to basic functionality: the addon loads, target buffs are displayed, and the options panel opens.
+
 ## v4.3.9-classic-worgenfix.6 (2026-08-14)
 
 - Normalized modern Classic aura API data before rendering aura icons, indicators, tag aura lookups, debuff coloring, highlights, and bundled Classic aura/cast helpers.

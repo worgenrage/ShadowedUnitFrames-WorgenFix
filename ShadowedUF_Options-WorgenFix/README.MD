@@ -2,7 +2,7 @@
 
 ShadowedUF_Options-WorgenFix is the separate, load-on-demand configuration component shipped with ShadowedUnitFrames-WorgenFix. It is not a new options system or a standalone addon; it preserves the original SUF configuration interface for the minimally modified compatibility build.
 
-The WorgenFix package primarily restores target-frame debuff icons affected by Blizzard's Classic Era 1.15.8 API changes. The current target client is 1.15.9.
+The WorgenFix package primarily restores target-frame debuff icons affected by Blizzard's Classic Era 1.15.8 API changes. The supported clients are Classic Era / Hardcore 1.15.9 and Burning Crusade Anniversary 2.5.6.
 
 ## Project Information
 
@@ -11,7 +11,7 @@ The WorgenFix package primarily restores target-frame debuff icons affected by B
 - Upstream maintainer: **Hendrik Leppkes** (`Nevcairiel`)
 - WorgenFix modifications: **Christian Hamar**
 - Upstream version used: **v4.3.9-classic**
-- Target client: **WoW Classic Era / Hardcore 1.15.9**
+- Target clients: **WoW Classic Era / Hardcore 1.15.9 and Burning Crusade Anniversary 2.5.6**
 
 Official and upstream links:
 

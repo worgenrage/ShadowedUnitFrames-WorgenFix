@@ -4,7 +4,7 @@
 
 - Addon name: `ShadowedUnitFrames-WorgenFix`.
 - Companion options addon name: `ShadowedUF_Options-WorgenFix`.
-- Current version: `v4.3.9-classic-worgenfix.6`.
+- Current version: `v4.3.9-classic-worgenfix.7`.
 - Version format: `v<upstream-version>-classic-worgenfix.<fork-release>`.
 - Keep the version synchronized in both `.toc` files, addon UI, and both `CHANGELOG.md` files.
 - Record every released version in `CHANGELOG.md`.
@@ -33,10 +33,10 @@
 
 ## Target Runtime
 
-- Target client: WoW Classic Era / Hardcore 1.15.9.
+- Target clients: WoW Classic Era / Hardcore 1.15.9 and Burning Crusade Anniversary 2.5.6.
 - Supported client languages: `deDE`, `enUS`, `esES`, `esMX`, `frFR`, `koKR`, `ptBR`, `ruRU`, `zhCN`, and `zhTW`.
-- TOC interface/API compatibility: `## Interface: 11509`.
-- `Interface: 11509` is the WoW client/interface API compatibility number, not a Lua version.
+- TOC interface/API compatibility: `## Interface: 11509,20506`.
+- `Interface: 11509,20506` contains WoW client/interface API compatibility numbers, not Lua versions.
 - Lua target: Blizzard WoW addon sandbox, Lua 5.1 subset.
 - Language Server flavor: `classic_era`.
 
@@ -54,7 +54,7 @@
   - normal Lua `require` / `package`
 - Load order is controlled by the `.toc` file.
 - Use ASCII-only identifiers, file/module names, slash command tokens, SavedVariables names, and constants.
-- Use only WoW APIs available in Classic Era 1.15.9.
+- Use only WoW APIs available in both Classic Era 1.15.9 and Burning Crusade Anniversary 2.5.6, or guard client-specific API usage.
 
 ## WoW Lua LS
 

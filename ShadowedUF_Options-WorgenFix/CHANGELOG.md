@@ -1,5 +1,11 @@
 # Shadowed UF - Worgen Fix (Options)
 
+## v4.3.9-classic-worgenfix.7 (2026-08-21)
+
+- Added Burning Crusade Anniversary 2.5.6 (`Interface: 20506`) compatibility metadata while retaining Classic Era / Hardcore 1.15.9 support.
+- Updated the in-game Credits version for the WorgenFix 7 release.
+- Synchronized the options package version with the core addon.
+
 ## v4.3.9-classic-worgenfix.6 (2026-08-14)
 
 - Updated the in-game Credits version for the WorgenFix 6 release.

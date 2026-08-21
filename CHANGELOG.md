@@ -2,6 +2,13 @@
 
 The core and options addons are versioned and released together.
 
+## v4.3.9-classic-worgenfix.7 (2026-08-21)
+
+### Shared
+
+- Added Burning Crusade Anniversary 2.5.6 (`Interface: 20506`) compatibility metadata to both addon packages while retaining Classic Era / Hardcore 1.15.9 support.
+- Synchronized the core and options addon versions for the WorgenFix 7 release.
+
 ## v4.3.9-classic-worgenfix.6 (2026-08-14)
 
 ### Shared

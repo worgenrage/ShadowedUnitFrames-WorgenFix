@@ -1,8 +1,8 @@
 # Shadowed Unit Frames - Worgen Fix
 
-ShadowedUnitFrames-WorgenFix is not a new unit-frame addon. It is an unofficial, minimally modified build of **Shadowed Unit Frames v4.3.9-classic** for WoW Classic Era and Hardcore.
+ShadowedUnitFrames-WorgenFix is not a new unit-frame addon. It is an unofficial, minimally modified build of **Shadowed Unit Frames v4.3.9-classic** for WoW Classic Era, Hardcore, and Burning Crusade Anniversary.
 
-Its primary purpose is to restore debuff icons below the target unit frame after Blizzard's Classic Era 1.15.8 API changes. The current target client is 1.15.9. It does not attempt to redesign SUF, add a new feature set, or change normal SUF profile and aura-filter behavior.
+Its primary purpose is to restore debuff icons below the target unit frame after Blizzard's Classic Era 1.15.8 API changes. The supported clients are Classic Era / Hardcore 1.15.9 and Burning Crusade Anniversary 2.5.6. It does not attempt to redesign SUF, add a new feature set, or change normal SUF profile and aura-filter behavior.
 
 > [!IMPORTANT]
 > **Your existing Shadowed Unit Frames settings are not imported automatically.** WorgenFix uses a separate SavedVariables database to avoid modifying or mixing with the original addon's data. A fresh WorgenFix installation therefore starts with its own settings. To reuse your existing SUF profiles and layouts, you must copy and rename the SavedVariables file manually while WoW is completely closed. Follow the [manual migration instructions](#migrating-an-existing-suf-configuration) before starting the game.
@@ -23,8 +23,8 @@ The options addon depends on the core addon. Both packages use the same release 
 - Upstream maintainer: **Hendrik Leppkes** (`Nevcairiel`)
 - WorgenFix modifications: **Christian Hamar**
 - Upstream version used: **v4.3.9-classic**
-- Current fork version: **v4.3.9-classic-worgenfix.6**
-- Target client: **WoW Classic Era / Hardcore 1.15.9**
+- Current fork version: **v4.3.9-classic-worgenfix.7**
+- Target clients: **WoW Classic Era / Hardcore 1.15.9 and Burning Crusade Anniversary 2.5.6**
 
 Official and upstream links:
 
