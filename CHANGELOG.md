@@ -4,7 +4,7 @@ The core and options addons are versioned and released together.
 
 ## v4.3.9-classic-worgenfix.8 (2026-08-29)
 
-- Try to detect original SUF addon and if that is already lodded
+- - Try to detect original SUF addon and if that is already loaded then give a WOW Dialog UI "error" instead of pure LUA error and stop addon loading.
 
 ## v4.3.9-classic-worgenfix.7 (2026-08-21)
 
