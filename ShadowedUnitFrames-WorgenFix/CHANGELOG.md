@@ -1,5 +1,9 @@
 # Shadowed Unit Frames - Worgen Fix
 
+## v4.3.9-classic-worgenfix.8 (2026-08-29)
+
+- - Try to detect original SUF addon and if that is already lodded then give a WOW Dialog UI "error" instead of pure LUA error and stop addon loading. 
+ 
 ## v4.3.9-classic-worgenfix.7 (2026-08-21)
 
 - Added Burning Crusade Anniversary 2.5.6 (`Interface: 20506`) compatibility metadata while retaining Classic Era / Hardcore 1.15.9 support.
