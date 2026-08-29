@@ -2,6 +2,10 @@
 	API overrides from external addons that augment the data missing in the Classic API
 ]]
 local addonName = ...
+-- Original SUF uses the same global ShadowUF table. OptionalDeps makes it load first when both are enabled.
+if( C_AddOns.IsAddOnLoaded("ShadowedUnitFrames") ) then
+	ShadowUF_WorgenFixConflict = true
+end
 ShadowUF = select(2, ...)
 ShadowUF.API = {}
 ShadowUF.addonPath = "Interface\\AddOns\\" .. addonName .. "\\"

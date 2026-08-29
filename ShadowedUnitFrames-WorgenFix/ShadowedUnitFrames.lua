@@ -5,6 +5,22 @@
 ShadowUF = select(2, ...)
 
 local L = ShadowUF.L
+local conflictPopupShown
+local function ShowOriginalSUFConflictPopup()
+	if( conflictPopupShown ) then return end
+	conflictPopupShown = true
+	StaticPopup_Show("SUF_WORGENFIX_ORIGINAL_LOADED")
+end
+
+StaticPopupDialogs["SUF_WORGENFIX_ORIGINAL_LOADED"] = {
+	text = "ShadowedUnitFrames-WorgenFix\n\nThe original ShadowedUnitFrames addon is also loaded.\n\nThese two addons cannot be used together.\n\nPlease disable the original ShadowedUnitFrames addon and reload the UI.",
+	button1 = OKAY,
+	timeout = 0,
+	whileDead = 1,
+	hideOnEscape = 1,
+	preferredIndex = 3,
+}
+
 ShadowUF.dbRevision = 61
 ShadowUF.dbRevisionClassic = 6
 ShadowUF.playerUnit = "player"
@@ -32,6 +48,12 @@ local TagEnv = setmetatable({
 }, { __index = _G, __newindex = function(k,v) _G[k] = v end })
 
 function ShadowUF:OnInitialize()
+	-- Original SUF's PLAYER_LOGIN also calls the global ShadowUF:OnInitialize after this fork overwrites it.
+	if( ShadowUF_WorgenFixConflict ) then
+		ShowOriginalSUFConflictPopup()
+		return
+	end
+
 	self.defaults = {
 		global = {
 			worgenFix = {
@@ -897,46 +919,61 @@ function ShadowUF:Print(msg)
 	DEFAULT_CHAT_FRAME:AddMessage("|cff33ff99Shadow UF|r: " .. msg)
 end
 
-CONFIGMODE_CALLBACKS = CONFIGMODE_CALLBACKS or {}
-CONFIGMODE_CALLBACKS["Shadowed Unit Frames"] = function(mode)
-	if( mode == "ON" ) then
-		ShadowUF.db.profile.locked = false
-		ShadowUF.modules.movers.isConfigModeSpec = true
-	elseif( mode == "OFF" ) then
-		ShadowUF.db.profile.locked = true
+if( ShadowUF_WorgenFixConflict ) then
+	CONFIGMODE_CALLBACKS = CONFIGMODE_CALLBACKS or {}
+	CONFIGMODE_CALLBACKS["Shadowed Unit Frames"] = function()
+		ShowOriginalSUFConflictPopup()
 	end
 
-	ShadowUF.modules.movers:Update()
-end
-
-SLASH_SHADOWEDUF1 = "/suf"
-SLASH_SHADOWEDUF2 = "/shadowuf"
-SLASH_SHADOWEDUF3 = "/shadoweduf"
-SLASH_SHADOWEDUF4 = "/shadowedunitframes"
-SlashCmdList["SHADOWEDUF"] = function(msg)
-	msg = msg and string.lower(msg)
-	if( msg and string.match(msg, "^profile (.+)") ) then
-		local profile = string.match(msg, "^profile (.+)")
-
-		for id, name in pairs(ShadowUF.db:GetProfiles()) do
-			if( string.lower(name) == profile ) then
-				ShadowUF.db:SetProfile(name)
-				ShadowUF:Print(string.format(L["Changed profile to %s."], name))
-				return
-			end
+	SLASH_SHADOWEDUF1 = "/suf"
+	SLASH_SHADOWEDUF2 = "/shadowuf"
+	SLASH_SHADOWEDUF3 = "/shadoweduf"
+	SLASH_SHADOWEDUF4 = "/shadowedunitframes"
+	SlashCmdList["SHADOWEDUF"] = function()
+		ShowOriginalSUFConflictPopup()
+	end
+else
+	CONFIGMODE_CALLBACKS = CONFIGMODE_CALLBACKS or {}
+	CONFIGMODE_CALLBACKS["Shadowed Unit Frames"] = function(mode)
+		if( mode == "ON" ) then
+			ShadowUF.db.profile.locked = false
+			ShadowUF.modules.movers.isConfigModeSpec = true
+		elseif( mode == "OFF" ) then
+			ShadowUF.db.profile.locked = true
 		end
 
-		ShadowUF:Print(string.format(L["Cannot find any profiles named \"%s\"."], profile))
-		return
+		ShadowUF.modules.movers:Update()
 	end
 
-	local loaded, reason = C_AddOns.LoadAddOn("ShadowedUF_Options-WorgenFix")
-	if( not ShadowUF.Config ) then
-		DEFAULT_CHAT_FRAME:AddMessage(string.format(L["Failed to load ShadowedUF_Options-WorgenFix, cannot open configuration. Error returned: %s"], reason and _G["ADDON_" .. reason] or ""))
-		return
-	end
+	SLASH_SHADOWEDUF1 = "/suf"
+	SLASH_SHADOWEDUF2 = "/shadowuf"
+	SLASH_SHADOWEDUF3 = "/shadoweduf"
+	SLASH_SHADOWEDUF4 = "/shadowedunitframes"
+	SlashCmdList["SHADOWEDUF"] = function(msg)
+		msg = msg and string.lower(msg)
+		if( msg and string.match(msg, "^profile (.+)") ) then
+			local profile = string.match(msg, "^profile (.+)")
 
-	ShadowUF.Config:Open()
+			for id, name in pairs(ShadowUF.db:GetProfiles()) do
+				if( string.lower(name) == profile ) then
+					ShadowUF.db:SetProfile(name)
+					ShadowUF:Print(string.format(L["Changed profile to %s."], name))
+					return
+				end
+			end
+
+			ShadowUF:Print(string.format(L["Cannot find any profiles named \"%s\"."], profile))
+			return
+		end
+
+		local loaded, reason = C_AddOns.LoadAddOn("ShadowedUF_Options-WorgenFix")
+		if( not ShadowUF.Config ) then
+			DEFAULT_CHAT_FRAME:AddMessage(string.format(L["Failed to load ShadowedUF_Options-WorgenFix, cannot open configuration. Error returned: %s"], reason and _G["ADDON_" .. reason] or ""))
+			return
+		end
+
+		ShadowUF.Config:Open()
+	end
 end
 
 local frame = CreateFrame("Frame")
@@ -944,9 +981,15 @@ frame:RegisterEvent("PLAYER_LOGIN")
 frame:RegisterEvent("ADDON_LOADED")
 frame:SetScript("OnEvent", function(self, event, addon)
 	if( event == "PLAYER_LOGIN" ) then
-		ShadowUF:OnInitialize()
+		if( ShadowUF_WorgenFixConflict ) then
+			ShowOriginalSUFConflictPopup()
+		else
+			ShadowUF:OnInitialize()
+		end
 		self:UnregisterEvent("PLAYER_LOGIN")
 	elseif( event == "ADDON_LOADED" and ( addon == "Blizzard_ArenaUI" or addon == "Blizzard_CompactRaidFrames" ) ) then
-		ShadowUF:HideBlizzardFrames()
+		if( not ShadowUF_WorgenFixConflict ) then
+			ShadowUF:HideBlizzardFrames()
+		end
 	end
 end)

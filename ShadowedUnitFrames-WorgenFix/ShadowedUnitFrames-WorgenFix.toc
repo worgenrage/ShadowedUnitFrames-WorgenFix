@@ -9,7 +9,7 @@
 ## X-Original-Source: https://github.com/Nevcairiel/ShadowedUnitFrames/tree/v4.3.9-classic
 ## X-Original-Website: https://www.wowace.com/addons/shadowed-unit-frames/
 ## X-Fork-Maintainer: Christian Hamar
-## OptionalDeps: Ace3, LibSharedMedia-3.0, AceGUI-3.0-SharedMediaWidgets, LibSpellRange-1.0, UTF8, Clique, LibClassicDurations, LibClassicCasterino
+## OptionalDeps: ShadowedUnitFrames, Ace3, LibSharedMedia-3.0, AceGUI-3.0-SharedMediaWidgets, LibSpellRange-1.0, UTF8, Clique, LibClassicDurations, LibClassicCasterino
 
 #@no-lib-strip@
 libs\LibStub\LibStub.lua
