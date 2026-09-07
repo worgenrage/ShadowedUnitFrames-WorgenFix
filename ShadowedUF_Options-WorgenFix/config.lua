@@ -6964,7 +6964,7 @@ local function loadOptions()
 					version = {
 						order = 7,
 						type = "description",
-						name = L["Fork version: v4.3.9-classic-worgenfix.7"],
+						name = L["Fork version: v4.3.9-classic-worgenfix.8"],
 					},
 					status = {
 						order = 8,

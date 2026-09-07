@@ -23,7 +23,7 @@ The options addon depends on the core addon. Both packages use the same release 
 - Upstream maintainer: **Hendrik Leppkes** (`Nevcairiel`)
 - WorgenFix modifications: **Christian Hamar**
 - Upstream version used: **v4.3.9-classic**
-- Current fork version: **v4.3.9-classic-worgenfix.7**
+- Current fork version: **v4.3.9-classic-worgenfix.8**
 - Target clients: **WoW Classic Era / Hardcore 1.15.9 and Burning Crusade Anniversary 2.5.6**
 
 Official and upstream links:
