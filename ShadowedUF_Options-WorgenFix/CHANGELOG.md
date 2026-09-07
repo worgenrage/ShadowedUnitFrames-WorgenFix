@@ -1,5 +1,10 @@
 # Shadowed UF - Worgen Fix (Options)
 
+## v4.3.9-classic-worgenfix.9 (2026-09-07)
+
+- Updated the embedded options Ace3 components (AceConfig-3.0, AceDBOptions-3.0, and AceGUI-3.0) to the complete official r1403 release files.
+- Verified the updated libraries with an in-game smoke test.
+
 ## v4.3.9-classic-worgenfix.8 (2026-08-29)
 
 - - Try to detect original SUF addon and if that is already loaded then give a WOW Dialog UI "error" instead of pure LUA error and stop addon loading.
