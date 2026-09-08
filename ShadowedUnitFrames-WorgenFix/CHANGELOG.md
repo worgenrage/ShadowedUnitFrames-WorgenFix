@@ -1,5 +1,10 @@
 # Shadowed Unit Frames - Worgen Fix
 
+## v4.3.9-classic-worgenfix.10 (2026-09-08)
+
+- Reissued the WorgenFix 9 core package as WorgenFix 10 after the previous release archive omitted the WorgenFix addon folders.
+- Synchronized the core package version with the WorgenFix 10 release.
+
 ## v4.3.9-classic-worgenfix.9 (2026-09-07)
 
 - Updated the embedded core Ace3 components (AceDB-3.0, CallbackHandler-1.0, and LibStub) to the complete official r1403 release files.

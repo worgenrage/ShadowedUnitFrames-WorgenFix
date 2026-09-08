@@ -2,6 +2,13 @@
 
 The core and options addons are versioned and released together.
 
+## v4.3.9-classic-worgenfix.10 (2026-09-08)
+
+### Shared
+
+- Reissued the WorgenFix 9 release as WorgenFix 10 after the previous release archive omitted the WorgenFix addon folders.
+- Synchronized the core and options addon versions for the WorgenFix 10 release.
+
 ## v4.3.9-classic-worgenfix.9 (2026-09-07)
 
 ### Shared

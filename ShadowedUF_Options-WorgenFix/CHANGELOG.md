@@ -1,5 +1,11 @@
 # Shadowed UF - Worgen Fix (Options)
 
+## v4.3.9-classic-worgenfix.10 (2026-09-08)
+
+- Reissued the WorgenFix 9 options package as WorgenFix 10 after the previous release archive omitted the WorgenFix addon folders.
+- Updated the in-game Credits version for the WorgenFix 10 release.
+- Synchronized the options package version with the core addon.
+
 ## v4.3.9-classic-worgenfix.9 (2026-09-07)
 
 - Updated the embedded options Ace3 components (AceConfig-3.0, AceDBOptions-3.0, and AceGUI-3.0) to the complete official r1403 release files.
